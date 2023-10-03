@@ -8,4 +8,4 @@ console.log(todayDate); // TEST
 let differenceTime = inputDate.getTime() - todayDate.getTime();
 let differenceDays = Math.floor(differenceTime / (1000 * 3600 * 24));
 
-console.log(differenceDays + " days remaining"); // TEST
+console.log(differenceDays + " days remaining"); // TEST OK
