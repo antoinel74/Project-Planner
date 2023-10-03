@@ -1,4 +1,5 @@
 import { form } from "./form.js";
+form();
 
 const tasksDisplay = document.getElementById("tasks-display");
 
@@ -10,8 +11,9 @@ class Card {
   }
 }
 
-cards.forEach((card) => {
+Card.forEach((card) => {
   card.forEach((task) => {
+    console.log(name);
     let newArticle = document.createElement("article");
     newArticle.classList.add("card");
 
@@ -61,4 +63,4 @@ cards.forEach((card) => {
   });
 });
 
-export { cards };
+export { Card };

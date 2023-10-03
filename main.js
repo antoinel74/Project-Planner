@@ -1,3 +1,3 @@
-import { cards } from "./assets/script/card.js";
+import { Card } from "./assets/script/card.js";
 
-cards();
+Card();
