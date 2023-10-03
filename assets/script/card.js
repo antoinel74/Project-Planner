@@ -62,11 +62,22 @@ createCardButton.addEventListener("click", () => {
   const descriptionValue = descriptionInput.value;
   const dueDateValue = dueDateInput.value;
 
-  // Create a new card and display it
-  const card = createCard(nameValue, descriptionValue, dueDateValue);
-  addCardtoContainer(card);
+  if (dueDateValue) {
+    let inputDate = new Date(dueDateValue);
+    let todayDate = new Date();
 
-  // Clear input fields
+    let differenceTime = inputDate.getTime() - todayDate.getTime();
+    let differenceDays = Math.floor(differenceTime / (1000 * 3600 * 24));
+    const card = createCard(
+      nameValue,
+      descriptionValue,
+      differenceDays + " days remaining"
+    );
+    addCardtoContainer(card);
+  } else {
+    alert("Please enter a deadline !");
+  }
+
   nameInput.value = "";
   descriptionInput.value = "";
   dueDateInput.value = "";
