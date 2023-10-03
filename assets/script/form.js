@@ -5,28 +5,42 @@ const form = () => {
   const description = document.getElementById("description");
   const dueDate = document.getElementById("due-date");
 
+  let nameValue = "";
+  let descriptionValue = "";
+  let dueDateValue = "";
+
   // stockage des informations
 
-  let nameValue;
-  let descriptionValue;
-  let dueDateValue;
+  let cards = [];
 
   // recupération des input
 
   names.addEventListener("keyup", (e) => {
     nameValue = e.target.value;
-    return nameValue;
   });
 
   description.addEventListener("keyup", (e) => {
     descriptionValue = e.target.value;
-    return descriptionValue;
   });
 
   dueDate.addEventListener("keyup", (e) => {
     dueDateValue = e.target.value;
-    return dueDateValue;
   });
+
+  const createCardButton = document.getElementById("create-card-button");
+  createCardButton.addEventListener("click", () => {
+    const card = new Card(nameValue, descriptionValue, dueDateValue);
+    cards.push(card);
+  });
+  return cards;
 };
+
+class Card {
+  constructor(nameValue, descriptionValue, dueDateValue) {
+    this.name = nameValue;
+    this.description = descriptionValue;
+    this.dueDate = dueDateValue;
+  }
+}
 
 export { form };
