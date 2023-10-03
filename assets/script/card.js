@@ -62,7 +62,7 @@ createCardButton.addEventListener("click", () => {
   const descriptionValue = descriptionInput.value;
   const dueDateValue = dueDateInput.value;
 
-  // Create a new card and add it to the display
+  // Create a new card and display it
   const card = createCard(nameValue, descriptionValue, dueDateValue);
   addCardtoContainer(card);
 
