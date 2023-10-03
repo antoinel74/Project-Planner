@@ -5,12 +5,13 @@ const form = () => {
   const description = document.getElementById("description");
   const dueDate = document.getElementById("due-date");
 
-  // stockage des informations
-
-  let cards = [];
   let nameValue = "";
   let descriptionValue = "";
   let dueDateValue = "";
+
+  // stockage des informations
+
+  let cards = [];
 
   // recupération des input
 
@@ -24,13 +25,22 @@ const form = () => {
 
   dueDate.addEventListener("keyup", (e) => {
     dueDateValue = e.target.value;
-
-    const createCardButton = document.getElementById("create-card-button");
-    createCardButton.addEventListener("click", () => {
-      const card = new Card(nameValue, descriptionValue, dueDateValue);
-      cards.push(card);
-    });
   });
+
+  const createCardButton = document.getElementById("create-card-button");
+  createCardButton.addEventListener("click", () => {
+    const card = new Card(nameValue, descriptionValue, dueDateValue);
+    cards.push(card);
+  });
+  return cards;
 };
+
+class Card {
+  constructor(nameValue, descriptionValue, dueDateValue) {
+    this.name = nameValue;
+    this.description = descriptionValue;
+    this.dueDate = dueDateValue;
+  }
+}
 
 export { form };
