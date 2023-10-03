@@ -7,25 +7,29 @@ const form = () => {
 
   // stockage des informations
 
-  let nameValue;
-  let descriptionValue;
-  let dueDateValue;
+  let cards = [];
+  let nameValue = "";
+  let descriptionValue = "";
+  let dueDateValue = "";
 
   // recupération des input
 
   names.addEventListener("keyup", (e) => {
     nameValue = e.target.value;
-    return nameValue;
   });
 
   description.addEventListener("keyup", (e) => {
     descriptionValue = e.target.value;
-    return descriptionValue;
   });
 
   dueDate.addEventListener("keyup", (e) => {
     dueDateValue = e.target.value;
-    return dueDateValue;
+
+    const createCardButton = document.getElementById("create-card-button");
+    createCardButton.addEventListener("click", () => {
+      const card = new Card(nameValue, descriptionValue, dueDateValue);
+      cards.push(card);
+    });
   });
 };
 
