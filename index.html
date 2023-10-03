@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style/style.scss" />
     <title>Project Planner</title>
+    <script defer type="module" src="/assets/script/card.js"></script>
+    <script defer type="module" src="/assets/script/form.js"></script>
   </head>
   <body>
     <header>
@@ -14,10 +16,12 @@
         <input type="text" name="name" id="name" />
 
         <label for="description">Description</label>
-        <input type="text" name="description" id="Description" />
+        <input type="text" name="description" id="description" />
 
         <label for="due-date">Due-Date</label>
         <input type="date" name="due-date" id="due-date" />
+
+        <button id="create-card-button">Submit</button>
       </div>
     </header>
 
