@@ -1,18 +1,21 @@
 body{
     header{
-        
+        // display: flex;
+        // justify-content: center;
+        // position: relative;
         #modale{
-            
             width: 250px;
             border: 1px solid black;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
+
             text-align: center;
             padding: 1em 10%;
-            position: absolute;
-            left: 7%;
-            top: 2em;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             background-color: antiquewhite;
             label{
                 margin: 0.7em 0;

@@ -53,7 +53,12 @@ function addCardtoContainer(card) {
   newSpan2.textContent = card.dueDate;
   newSpan2.classList.add("remaining-time");
 
+  let buttonDelete = document.createElement("button");
+  buttonDelete.textContent = "Delete";
+  buttonDelete.classList.add("delete-btn");
+
   newDiv3.appendChild(newSpan2);
+  newDiv3.appendChild(buttonDelete);
   newArticle.appendChild(newDiv3);
 
   tasksDisplay.appendChild(newArticle);
