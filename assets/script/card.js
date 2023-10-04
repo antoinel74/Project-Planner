@@ -1,4 +1,8 @@
 import { form } from "./form.js";
+import { switchState } from "./task-status.js";
+import { removeCard } from "./delete-btn.js";
+/* import { saveCards, getCards } from "./local-storage.js"; */
+
 const tasksDisplay = document.getElementById("tasks-display");
 
 function createCard(nameValue, descriptionValue, dueDateValue) {
@@ -23,6 +27,10 @@ function addCardtoContainer(card) {
 
   let newSpan = document.createElement("span");
   newSpan.classList.add("filter");
+  newSpan.classList.add("filter-toDo");
+  newSpan.addEventListener("click", () => {
+    switchState(newSpan);
+  });
 
   newArticle.appendChild(newDiv);
   newDiv.appendChild(name);
@@ -47,7 +55,15 @@ function addCardtoContainer(card) {
   newSpan2.textContent = card.dueDate;
   newSpan2.classList.add("remaining-time");
 
+  let buttonDelete = document.createElement("button");
+  buttonDelete.textContent = "x";
+  buttonDelete.classList.add("delete-btn");
+  /*   buttonDelete.addEventListener("click", () => {
+    removeCard(buttonDelete);
+  }); */
+
   newDiv3.appendChild(newSpan2);
+  newDiv3.appendChild(buttonDelete);
   newArticle.appendChild(newDiv3);
 
   tasksDisplay.appendChild(newArticle);
@@ -74,6 +90,7 @@ createCardButton.addEventListener("click", () => {
       differenceDays + " days remaining"
     );
     addCardtoContainer(card);
+    saveCards(card);
   } else {
     alert("Please enter a deadline !");
   }
@@ -81,4 +98,11 @@ createCardButton.addEventListener("click", () => {
   nameInput.value = "";
   descriptionInput.value = "";
   dueDateInput.value = "";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedCards = getCards();
+  savedCards.forEach((card) => {
+    addCardtoContainer(card);
+  });
 });

@@ -9,18 +9,23 @@
     <script type="text/javascript" src="/assets/script/cards.js"></script>
     <script defer type="module" src="/assets/script/card.js"></script>
     <script defer type="module" src="/assets/script/form.js"></script>
+    <script defer type="module" src="/assets/script/task-status.js"></script>
+    <script src="/assets/script/local-storage.js"></script>
+    <script defer type="module" src="/assets/script/modale.js"></script>
+    <script src="assets/script/delete-btn.js"></script>
     <script defer type="module" src="/assets/script/sorting.js"></script>
   </head>
   <body>
-    <header>
+    <header class="hidden">
       <div id="modale">
-        <label for="name">Name</label>
+        <button id="close-modale">x</button>
+        <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
 
-        <label for="description">Description</label>
+        <label for="description">Description:</label>
         <input type="text" name="description" id="description" />
 
-        <label for="due-date">Due-Date</label>
+        <label for="due-date">Due-Date:</label>
         <input type="date" name="due-date" id="due-date" />
 
         <button id="create-card-button">Submit</button>
@@ -35,9 +40,9 @@
             <option  class="sort-option" value="name">Name</option>
             <option class="sort-option" value="remainingTime">Remaining Time</option>
         </select>
+        <a class="button-modale" href="#">+</a>
       </section>
       <section id="tasks-display"></section>
     </main>
-    <!-- <script src="./assets/script/remainingdays.js"></script> -->
   </body>
 </html>
