@@ -1,0 +1,29 @@
+body{
+    header{
+        
+        #modale{
+            
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 1em 10%;
+            position: absolute;
+            left: 7%;
+            top: 2em;
+            background-color: antiquewhite;
+            label{
+                margin: 0.7em 0;
+            }
+            input{
+                margin-bottom: 0.7em;
+            }
+        }
+    }
+}
+
+.hidden{
+    visibility: hidden;
+}
