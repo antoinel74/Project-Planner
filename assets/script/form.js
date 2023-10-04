@@ -11,8 +11,7 @@ const form = () => {
 
   // stockage des informations
 
-  let cards = [];
-
+  
   // recupération des input
 
   names.addEventListener("keyup", (e) => {

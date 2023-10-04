@@ -5,6 +5,7 @@
     border: 1px solid black;
     border-radius: 25px;
     margin: 1em auto;
+    background-color: white;
     padding: 1em 5%;
     .card-header {
       display: flex;
@@ -35,12 +36,12 @@
         margin: 1em 0;
       }
     }
-    .card-footer{
+    .card-footer {
       display: flex;
       justify-content: space-between;
-    // .remaining-time{
+      // .remaining-time{
 
-    // }
+      // }
     }
   }
 }
