@@ -1,4 +1,6 @@
 import { form } from "./form.js";
+import { switchState } from "./task-status.js";
+
 const tasksDisplay = document.getElementById("tasks-display");
 
 function createCard(nameValue, descriptionValue, dueDateValue) {
@@ -22,6 +24,10 @@ function addCardtoContainer(card) {
 
   let newSpan = document.createElement("span");
   newSpan.classList.add("filter");
+  newSpan.classList.add("filter-toDo");
+  newSpan.addEventListener("click", () => {
+    switchState(newSpan);
+  });
 
   newArticle.appendChild(newDiv);
   newDiv.appendChild(name);
@@ -77,6 +83,10 @@ createCardButton.addEventListener("click", () => {
   } else {
     alert("Please enter a deadline !");
   }
+
+  let taskStatus = document
+    .querySelectorAll(".filter")
+    .addEventListener("click", switchState());
 
   nameInput.value = "";
   descriptionInput.value = "";
