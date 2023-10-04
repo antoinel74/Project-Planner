@@ -35,10 +35,12 @@
         margin: 1em 0;
       }
     }
-    // .card-footer{
+    .card-footer{
+      display: flex;
+      justify-content: space-between;
     // .remaining-time{
 
     // }
-    // }
+    }
   }
 }
