@@ -1,5 +1,6 @@
 import { form } from "./form.js";
 import { switchState } from "./task-status.js";
+/* import { saveCards, getCards } from "./local-storage.js"; */
 
 const tasksDisplay = document.getElementById("tasks-display");
 
@@ -80,15 +81,19 @@ createCardButton.addEventListener("click", () => {
       differenceDays + " days remaining"
     );
     addCardtoContainer(card);
+    saveCards(card);
   } else {
     alert("Please enter a deadline !");
   }
 
-  let taskStatus = document
-    .querySelectorAll(".filter")
-    .addEventListener("click", switchState());
-
   nameInput.value = "";
   descriptionInput.value = "";
   dueDateInput.value = "";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedCards = getCards();
+  savedCards.forEach((card) => {
+    addCardtoContainer(card);
+  });
 });
