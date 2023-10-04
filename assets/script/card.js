@@ -1,5 +1,6 @@
 import { form } from "./form.js";
 import { switchState } from "./task-status.js";
+import { removeCard } from "./delete-btn.js";
 /* import { saveCards, getCards } from "./local-storage.js"; */
 
 const tasksDisplay = document.getElementById("tasks-display");
@@ -54,8 +55,11 @@ function addCardtoContainer(card) {
   newSpan2.classList.add("remaining-time");
 
   let buttonDelete = document.createElement("button");
-  buttonDelete.textContent = "Delete";
+  buttonDelete.textContent = "x";
   buttonDelete.classList.add("delete-btn");
+  /*   buttonDelete.addEventListener("click", () => {
+    removeCard(buttonDelete);
+  }); */
 
   newDiv3.appendChild(newSpan2);
   newDiv3.appendChild(buttonDelete);
