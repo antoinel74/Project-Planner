@@ -19,35 +19,71 @@
 
 
 
+cards = [
+  {
+    name : "sdjef" , 
+    description : "dzfhhjezf" ,
+    dueDate : "28/10/2023"
+  },{
+    name : "dddd" , 
+    description : "ffffff" ,
+    dueDate : "21/10/2023"
+  },{
+    name : "shdhdeh" , 
+    description : "sdheh" ,
+    dueDate : "11/10/2023"
+  }
+];
+         
+console.log(cards);
 
 
 
-const sortSelect = document.querySelectorAll("#sort-select");  
+createCard(nameValue, descriptionValue, dueDateValue);
 
-function sortTasks(cardArray) {
-  // console.log(sortSelect.value);
+
+
+const sortSelect = document.querySelector("#sort-select");  
+
+function sortTasks(cards) {
+  
   let sortBy = this.value;
   if (sortBy === "name") {
-    cardArray.sort((a, b) => a.name.localeCompare(b.name));
+    cards.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortBy === "remainingTime") {
-    cardArray.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
+    cards.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
   }
- 
-  updateTasksDisplay(cardArray);
+  console.log(cards);
+
 }
 
 
-sortSelect.forEach(option => {
-  option.addEventListener("change", function () {
+sortSelect.addEventListener("change", sortTasks) ;
     
-    const cardArray = Array.from(sortSelect);
-    sortTasks.call(this, cardArray);
-    
-  });
-});
 
-
-
-function updateTasksDisplay(cardArray) {
+function updateTasksDisplay(cards) {
  
 };
+
+// const sortSelect = document.querySelector("#sort-select"); 
+// const cardArray = []; 
+
+// function sortTasks() {
+//   const sortBy = sortSelect.value; 
+
+//   if (sortBy === "name") {
+//     cardArray.sort((a, b) => a.name.localeCompare(b.name));
+//   } else if (sortBy === "remainingTime") {
+//     cardArray.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
+//   }
+ 
+//   updateTasksDisplay(cardArray);
+// }
+
+// sortSelect.addEventListener("change", sortTasks); 
+
+// function updateTasksDisplay(cardArray) {
+  
+// }
+
+
