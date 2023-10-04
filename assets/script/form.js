@@ -31,6 +31,8 @@ const form = () => {
   createCardButton.addEventListener("click", () => {
     const card = new Card(nameValue, descriptionValue, dueDateValue);
     cards.push(card);
+    hiddenTarget.classList.add("hidden");
+    console.log("coucou");
   });
   return cards;
 };

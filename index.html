@@ -8,17 +8,18 @@
     <title>Project Planner</title>
     <script defer type="module" src="/assets/script/card.js"></script>
     <script defer type="module" src="/assets/script/form.js"></script>
+    <script defer type="module" src="/assets/script/modale.js"></script>
   </head>
   <body>
-    <header>
+    <header class="hidden">
       <div id="modale">
-        <label for="name">Name</label>
+        <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
 
-        <label for="description">Description</label>
+        <label for="description">Description:</label>
         <input type="text" name="description" id="description" />
 
-        <label for="due-date">Due-Date</label>
+        <label for="due-date">Due-Date:</label>
         <input type="date" name="due-date" id="due-date" />
 
         <button id="create-card-button">Submit</button>
@@ -28,9 +29,9 @@
     <main>
       <section class="header">
         <h1 class="header_title">Deadline.js</h1>
+        <a class="button-modale" href="#">+</a>
       </section>
       <section id="tasks-display"></section>
     </main>
-    <script src="./assets/script/remainingdays.js"></script>
   </body>
 </html>
