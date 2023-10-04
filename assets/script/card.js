@@ -11,6 +11,7 @@ function createCard(nameValue, descriptionValue, dueDateValue) {
 
 function addCardtoContainer(card) {
   let newArticle = document.createElement("article");
+  
   newArticle.classList.add("card");
 
   let newDiv = document.createElement("div");
@@ -61,7 +62,6 @@ createCardButton.addEventListener("click", () => {
   const nameValue = nameInput.value;
   const descriptionValue = descriptionInput.value;
   const dueDateValue = dueDateInput.value;
-
   if (dueDateValue) {
     let inputDate = new Date(dueDateValue);
     let todayDate = new Date();
