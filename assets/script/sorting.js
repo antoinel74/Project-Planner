@@ -95,10 +95,15 @@
 // // }
 
 
-console.table(cards);
+
+const cardElement = Array.from(document.querySelectorAll(".card"));
+
+let cardNames = cardElement.map(card => card.querySelector(".card-name").textContent);
+
+console.log(cardNames);
 
 
-let sortOption = document.querySelector("#sort-select");
+
 
 sortOption.addEventListener("change",function(){
   console.log(sortOption.value);
