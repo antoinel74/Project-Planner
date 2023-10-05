@@ -11,7 +11,6 @@ const form = () => {
 
   // stockage des informations
 
-  
   // recupération des input
 
   names.addEventListener("keyup", (e) => {
