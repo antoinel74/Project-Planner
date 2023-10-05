@@ -1,4 +1,4 @@
-export function removeCard(e) {
+function removeCard(e) {
   e.parentNode.parentNode.style.transform = "translateY(-35px)";
   e.parentNode.parentNode.style.animationTimingFunction = "linear";
   setTimeout(() => {
@@ -12,3 +12,5 @@ document.addEventListener("click", (e) => {
     savedCards();
   }
 });
+
+export { removeCard };

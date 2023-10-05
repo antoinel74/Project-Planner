@@ -19,14 +19,15 @@
     <header class="hidden">
       <div id="modale">
         <button id="close-modale">x</button>
+
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" minlength="3" required>
 
         <label for="description">Description:</label>
-        <input type="text" name="description" id="description" />
+        <input type="text" name="description" id="description">
 
         <label for="due-date">Due-Date:</label>
-        <input type="date" name="due-date" id="due-date" />
+        <input type="date" name="due-date" id="due-date">
 
         <button id="create-card-button">Submit</button>
       </div>
@@ -46,6 +47,15 @@
       </section>
       <section id="tasks-display"></section>
 
+      <div class="action-btns">
+        <button class="footer_add-btn" id="footer-addbtn">+</button>
+      </div>
     </main>
+    <footer>
+      <p class="footer-content">
+        Developed with <span class="heart">&#9825;</span> by T. Desmet, J.
+        Michel & A. Lansman
+      </p>
+    </footer>
   </body>
 </html>
