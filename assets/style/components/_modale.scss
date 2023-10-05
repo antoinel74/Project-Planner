@@ -16,12 +16,14 @@ body {
       background: #2980b9;
       background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
       background: linear-gradient(to right, #2c3e50, #2980b9);
+      color: white;
       #close-modale {
         border-style: none;
         font-size: 1.2em;
-        background-color: white;
+        background-color: #2980b9;
         width: 2em;
         align-self: flex-end;
+        color: white;
       }
       label {
         margin: 0.7em 0;
