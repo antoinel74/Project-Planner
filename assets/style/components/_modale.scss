@@ -8,7 +8,7 @@ body {
       display: flex;
       flex-direction: column;
       text-align: center;
-      padding: 1em 10%;
+      padding: 1em 10% 3em 10%;
       position: fixed;
       left: 50%;
       top: 50%;
@@ -24,12 +24,20 @@ body {
         width: 2em;
         align-self: flex-end;
         color: white;
+        cursor: pointer;
+        &:hover{
+          background-color: white;
+          color: black;
+        }
       }
       label {
         margin: 0.7em 0;
       }
       input {
         margin-bottom: 0.7em;
+      }
+      #create-card-button{
+        margin-top: 10px;
       }
     }
   }
@@ -44,7 +52,7 @@ body {
     header{
       #modale{
         width: 40%;
-        padding: 1em 5%;
+        padding: 1em 5% 3em 5%;
       }
     }
   }
