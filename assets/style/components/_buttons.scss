@@ -14,4 +14,17 @@
       color: rgb(228, 202, 86);
     }
   }
+  #clear-local-storage {
+    background: none;
+    margin-top: 8px;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      transform: scale(110%);
+      color: rgb(237, 81, 81);
+    }
+  }
 }

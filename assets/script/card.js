@@ -58,9 +58,6 @@ function addCardtoContainer(card) {
   let buttonDelete = document.createElement("button");
   buttonDelete.textContent = "x";
   buttonDelete.classList.add("delete-btn");
-  /*   buttonDelete.addEventListener("click", () => {
-    removeCard(buttonDelete);
-  }); */
 
   newDiv3.appendChild(newSpan2);
   newDiv3.appendChild(buttonDelete);
