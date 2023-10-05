@@ -95,7 +95,65 @@
 // // }
 
 
-console.table(cards);
+// function renderExistingCards(cards) {
+
+//   const tasksDisplay = document.getElementById("tasks-display");
+  
+//   tasksDisplay.innerHTML = '';
+  
+// //   cards.forEach((card) => {
+
+// //  addCardtoContainer(card);
+    
+// //   });
+
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+
+
+// renderExistingCards(cards);
+
+// });
+
+// console.table(cards);
+
+let cardsArray = [  
+  {
+  name : "sdjef" , 
+  description : "dzfhhjezf" ,
+  dueDate : "28/10/2023"
+},
+{
+  name : "dddd" , 
+  description : "ffffff" ,
+  dueDate : "21/10/2023"
+},
+{
+  name : "shdhdeh" , 
+  description : "sdheh" ,
+  dueDate : "11/10/2023"
+},
+];
+
+
+// let arrayDisplayElement = document.getElementById("arrayDisplay");
+
+
+// cardsArray.forEach(function (card){
+
+// let cardElement = document.createElement("div");
+// cardElement.classList.add("card");
+// cardElement.innerHTML = `
+
+// <h2>${card.name}</h2>
+// <p>${card.description}</p>
+// <p>Due Date: ${card.dueDate}</p>
+// `;
+// arrayDisplayElement.appendChild(cardElement);
+// });
+
+
 
 
 let sortOption = document.querySelector("#sort-select");
@@ -104,13 +162,18 @@ sortOption.addEventListener("change",function(){
   console.log(sortOption.value);
 
   let sortBy = sortOption.value;
+
     if (sortBy === "name") {
-      cards.sort((a, b) => a.name.localeCompare(b.name));
+      let sortName = document.querySelector(".card-name");
+      sortName.sort((a, b) => a.name.localeCompare(b.name));
+      console.log(sortName);
     } else if (sortBy === "remainingTime") {
       cards.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
     }
     console.table(cards);
+
   //  updateTasksDisplay(cards);
+
 }); 
 
  
@@ -119,25 +182,3 @@ sortOption.addEventListener("change",function(){
 
 
 
-
-// const sortSelect = document.querySelector("#sort-option"); 
-
-// function sortTasks() {
-//   console.log(sortSelect.value);
-//   let sortBy = sortSelect.value;
-//   if (sortBy === "name") {
-//     cardArray.sort((a, b) => a.name.localeCompare(b.name));
-//   } else if (sortBy === "remainingTime") {
-//     cardArray.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
-//   }
- 
-//   updateTasksDisplay(cardArray);
-// }
-
-// sortSelect.addEventListener("change",sortTasks)
-
-
-
-// function updateTasksDisplay(cardArray) {
- 
-// }

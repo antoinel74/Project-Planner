@@ -2,6 +2,7 @@ import { form } from "./form.js";
 import { switchState } from "./task-status.js";
 import { removeCard } from "./delete-btn.js";
 /* import { saveCards, getCards } from "./local-storage.js"; */
+// import { cards } from "./cards.js";
 
 const tasksDisplay = document.getElementById("tasks-display");
 
@@ -90,7 +91,9 @@ createCardButton.addEventListener("click", () => {
       differenceDays + " days remaining"
     );
     addCardtoContainer(card);
+    cards.push(card);
     saveCards(card);
+    
   } else {
     alert("Please enter a deadline !");
   }
@@ -100,9 +103,9 @@ createCardButton.addEventListener("click", () => {
   dueDateInput.value = "";
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const savedCards = getCards();
-  savedCards.forEach((card) => {
-    addCardtoContainer(card);
-  });
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const savedCards = getCards();
+//   savedCards.forEach((card) => {
+//     addCardtoContainer(card);
+//   });
+// });
