@@ -1,31 +1,233 @@
-nav{
 
+.navBar{
+
+   display: flex;
+   justify-content: center;
+
+
+}
+
+.sortNameButton {
+  align-items: center;
+  background-color: white;
+  box-shadow: 5px 5px 5px $yellow;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: $mainfont;
+  font-size: 12px;
+  height: 20px;
+  justify-content: center;
+  line-height: 24px;
+  margin-right: 10px;
+  margin-left: 3px;
+  max-width: 100%;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: .2s ease-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;}
+
+.sortNameButton:hover {
+  background-color: $yellow;
+  border: white;
+  color: white;
+  left: 0;
+  top: 1px;
+  box-shadow: none;
+  transform: translate(1px, 1px);
+  transition: transform .2s ease-out;
+  
+}
+
+
+.sortTimeButton {
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px $yellow;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: $mainfont;
+    font-size: 12px;
+    height: 20px;
+    justify-content: center;
+    line-height: 24px;
+    margin-right: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    transition: .2s ease-out;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;}
+  
+  
+.sortTimeButton:hover {
+    background-color: $yellow;
+    border: white;
+    color: white;
+    left: 0;
+    top: 1px;
+    box-shadow: none;
+    transform: translate(1px, 1px);
+    transition: transform .2s ease-out;
+    
+  }
+
+
+
+.sortDoButton{
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px red;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: $mainfont;
+    font-size: 12px;
+    height: 20px;
+    justify-content: center;
+    line-height: 24px;
+    margin-right: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    transition: .2s ease-out;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;}
+      
+      
+    .sortDoButton:hover {
+        background-color: red;
+        border: white;
+        color: white;
+        left: 0;
+        top: 1px;
+        box-shadow: none;
+        transform: translate(1px, 1px);
+        transition: transform .2s ease-out;
+        
+      }
+
+
+.sortProgressButton{
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px orange;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: $mainfont;
+    font-size: 12px;
+    height: 20px;
+    justify-content: center;
+    line-height: 24px;
+    margin-right: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    transition: .2s ease-out;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;}
+  
+  .sortProgressButton:hover {
+    background-color: orange;
+    border: white;
+    color: white;
+    left: 0;
+    top: 1px;
+    box-shadow: none;
+    transform: translate(1px, 1px);
+    transition: transform .2s ease-out;
+    
+  }
+
+
+
+
+
+.sortDoneButton{
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px $green;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: $mainfont;
+    font-size: 12px;
+    height: 20px;
+    justify-content: center;
+    line-height: 24px;
+    margin-right: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+    position: relative;
+    text-align: center;
+    transition: .2s ease-out;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;}
+  
+  .sortDoneButton:hover {
+    background-color: $green;
+    border: white;
+    color: white;
+    left: 0;
+    top: 1px;
+    box-shadow: none;
+    transform: translate(1px, 1px);
+    transition: transform .2s ease-out;
+    
+  }
+
+
+
+
+
+  .button-modale{
+
+    color: white;
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1.3em;
+    cursor: pointer;
    
 
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-  
-
-
-label{
-
-
-
-
-
-}
-
-select{
 
     
-
 }
+      
+      .button-modale:hover {
+       
+        color: $yellow;
 
-.button-modale{
-
-
-
-}
-
-
-}   
+      }
