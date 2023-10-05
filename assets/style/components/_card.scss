@@ -8,6 +8,7 @@
     padding: 1em 5%;
     transition: all 0.2s ease-in-out;
     overflow: hidden;
+    word-wrap: break-word;
     &:hover {
       transform: translateY(-12px);
     }
