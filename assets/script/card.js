@@ -15,7 +15,7 @@ function createCard(nameValue, descriptionValue, dueDateValue) {
 
 function addCardtoContainer(card) {
   let newArticle = document.createElement("article");
-  
+
   newArticle.classList.add("card");
 
   let newDiv = document.createElement("div");
