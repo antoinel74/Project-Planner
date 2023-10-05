@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/img/clock-regular.svg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style/style.scss" />
+    <title>Project Planner</title>
+    <script defer type="module" src="/assets/script/card.js"></script>
+    <script defer type="module" src="/assets/script/form.js"></script>
+    <script defer type="module" src="/assets/script/task-status.js"></script>
+    <script defer type="module" src="/assets/script/modale.js"></script>
+    <script defer type="module" src="/assets/script/sorting.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b5a5bff8f0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="hidden">
+      <div id="modale">
+        <button id="close-modale">x</button>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" minlength="3" required />
+
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" />
+
+        <label for="due-date">Due-Date:</label>
+        <input type="date" name="due-date" id="due-date" />
+
+        <button id="create-card-button">Submit</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="header">
+        <div class="logo">
+          <h1 class="header_title">Deadline.js</h1>
+        </div>
+        <div class="navBar">
+          <button id="sortName-btn" class="sortNameButton navbtn">Name</button>
+          <button id="sortTime-btn" class="sortTimeButton navbtn">Time</button>
+          <button id="sortToDo" class="sortDoButton navbtn">
+            <span class="status_todo"></span>To Do
+          </button>
+          <button id="sortInProgress" class="sortProgressButton navbtn">
+            <span class="status_progress"></span>In Progress
+          </button>
+          <button id="sortDone" class="sortDoneButton navbtn">
+            <span class="status_done"></span>Done
+          </button>
+          <button class="button-modale" href="#">+</button>
+        </div>
+      </section>
+      <section id="tasks-display"></section>
+      <div class="action-btns">
+        <button id="clear-local-storage">
+          <i class="fa-solid fa-snowplow"></i>
+        </button>
+        <button class="footer_add-btn" id="footer-addbtn">+</button>
+      </div>
+    </main>
+    <footer>
+      <p class="footer-content">
+        Developed with <span class="heart">&#9825;</span> by T. Desmet, J.
+        Michel & A. Lansman.
+      </p>
+    </footer>
+    <script defer src="/assets/script/local-storage.js"></script>
+    <script defer src="assets/script/delete-btn.js"></script>
+  </body>
+</html>

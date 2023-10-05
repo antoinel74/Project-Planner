@@ -1,0 +1,75 @@
+#tasks-display {
+  width: 100%;
+  .card {
+    width: 80%;
+    border-radius: 25px;
+    margin: 1em auto;
+    background-color: white;
+    padding: 1em 5%;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    word-wrap: break-word;
+    &:hover {
+      transform: translateY(-12px);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      .card-name {
+        font-size: 3em;
+        font-weight: $boldFont;
+      }
+      .filter-toDo {
+        height: 10px;
+        width: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: red;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: scale(140%);
+        }
+      }
+      .filter-inProgress {
+        @extend .filter-toDo;
+        background-color: orange;
+      }
+      .filter-done {
+        @extend .filter-toDo;
+        background-color: $green;
+      }
+    }
+
+    .card-main {
+      .card-description {
+        margin: 1em 0;
+      }
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      font-size: 0.9em;
+      color: rgb(88, 84, 84);
+      .remaining-time {
+        display: flex;
+        &::before {
+          content: url(/assets/img/clock-regular.svg);
+          width: 12px;
+          height: 12px;
+          margin-right: 6px;
+        }
+      }
+      .delete-btn {
+        border: none;
+        background-color: white;
+        font-size: 1em;
+        font-weight: 600;
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}

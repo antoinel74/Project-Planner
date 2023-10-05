@@ -1,0 +1,35 @@
+body {
+  background: #2980b9;
+  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);
+  background: linear-gradient(to right, #2c3e50, #2980b9);
+
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 410px) {
+  body {
+    .header_title {
+      font-size: 4em;
+    }
+    main {
+      #tasks-display {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    main {
+      #tasks-display {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
