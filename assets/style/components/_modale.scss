@@ -25,7 +25,7 @@ body {
         align-self: flex-end;
         color: white;
         cursor: pointer;
-        &:hover{
+        &:hover {
           background-color: white;
           color: black;
         }
@@ -36,8 +36,9 @@ body {
       input {
         margin-bottom: 0.7em;
       }
-      #create-card-button{
+      #create-card-button {
         margin-top: 10px;
+        cursor: pointer;
       }
     }
   }
@@ -48,9 +49,9 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
-  body{
-    header{
-      #modale{
+  body {
+    header {
+      #modale {
         width: 40%;
         padding: 1em 5% 3em 5%;
       }
