@@ -1,120 +1,44 @@
-// const sortSelect = document.getElementById("sort-select");
+function sortCardsByName() {
+  const cardElements = Array.from(document.querySelectorAll(".card"));
 
-// let sortBy = sortSelect;
+  cardElements.sort((a, b) => {
+    const nameA = a.querySelector(".card-name").textContent;
+    const nameB = b.querySelector(".card-name").textContent;
+    return nameA.localeCompare(nameB);
+  });
 
-// function sortTasks(card) {
-//   if (sortBy === "name") {
-//     card.sort((a, b) => a.name.localeCompare(b.name));
-//   } else if (sortBy === "remainingTime") {
-//     card.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
-//   }
-//   updateTasksDisplay();
-// }
+  const cardContainer = document.getElementById("tasks-display");
+  cardContainer.innerHTML = "";
+  cardElements.forEach((card) => cardContainer.appendChild(card));
+}
 
-// sortSelect.addEventListener("change", (e) => {
-//   const sectionId = document.querySelector('#sort-select');
-//   const card = document.querySelectorAll('.card')
-//   let remaining = document.querySelector('.remaining-time')
-//   let aChild = card[0].children[0].textContent;
-//   let bChild = remaining.textContent;
-//   console.log(bChild);
-//   e.target.value === 'name' ? sectionId.sort((aChild, bChild)=> aChild.localeCompare(bChild)) : false;
+// Return the remainingDays as a number integer, display 0 if no valid time found
+function getTimeRemaining(remainingTime) {
+  const match = remainingTime.match(/(\d+) days remaining/);
+  return match ? parseInt(match[1]) : 0;
+}
 
-// });
-// sortTasks.addEventListener("change", sortSelect);
+function sortCardsByRemainingTime() {
+  const cardElements = Array.from(document.querySelectorAll(".card"));
 
-// cards = [
-//   {
-//     name : "sdjef" ,
-//     description : "dzfhhjezf" ,
-//     dueDate : "28/10/2023"
-//   },{
-//     name : "dddd" ,
-//     description : "ffffff" ,
-//     dueDate : "21/10/2023"
-//   },{
-//     name : "shdhdeh" ,
-//     description : "sdheh" ,
-//     dueDate : "11/10/2023"
-//   }
-// ];
+  cardElements.sort((a, b) => {
+    const timeA = getTimeRemaining(
+      a.querySelector(".remaining-time").textContent
+    );
+    const timeB = getTimeRemaining(
+      b.querySelector(".remaining-time").textContent
+    );
 
-// console.log(cards);
+    return timeA - timeB;
+  });
 
-// createCard(nameValue, descriptionValue, dueDateValue);
+  const cardContainer = document.getElementById("tasks-display");
+  cardContainer.innerHTML = "";
+  cardElements.forEach((card) => cardContainer.appendChild(card));
+}
 
-// const sortSelect = document.querySelector("#sort-select");
+const sortByNameButton = document.getElementById("sortName-btn");
+sortByNameButton.addEventListener("click", sortCardsByName);
 
-// function sortTasks(cards) {
-
-//   let sortBy = this.value;
-//   if (sortBy === "name") {
-//     cards.sort((a, b) => a.name.localeCompare(b.name));
-//   } else if (sortBy === "remainingTime") {
-//     cards.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
-//   }
-//   console.log(cards);
-
-// }
-
-// sortSelect.addEventListener("change", sortTasks) ;
-
-// function updateTasksDisplay(cards) {
-
-// };
-
-// // const sortSelect = document.querySelector("#sort-select");
-// // const cardArray = [];
-
-// // function sortTasks() {
-// //   const sortBy = sortSelect.value;
-
-// //   if (sortBy === "name") {
-// //     cardArray.sort((a, b) => a.name.localeCompare(b.name));
-// //   } else if (sortBy === "remainingTime") {
-// //     cardArray.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
-// //   }
-
-// //   updateTasksDisplay(cardArray);
-// // }
-
-// // sortSelect.addEventListener("change", sortTasks);
-
-// // function updateTasksDisplay(cardArray) {
-
-// // }
-
-console.table(cards);
-
-sortOption.addEventListener("change", function () {
-  console.log(sortOption.value);
-
-  let sortBy = sortOption.value;
-  if (sortBy === "name") {
-    cards.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sortBy === "remainingTime") {
-    cards.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
-  }
-  console.table(cards);
-  //  updateTasksDisplay(cards);
-});
-
-// const sortSelect = document.querySelector("#sort-option");
-
-// function sortTasks() {
-//   console.log(sortSelect.value);
-//   let sortBy = sortSelect.value;
-//   if (sortBy === "name") {
-//     cardArray.sort((a, b) => a.name.localeCompare(b.name));
-//   } else if (sortBy === "remainingTime") {
-//     cardArray.sort((a, b) => a.dueDate.localeCompare(b.dueDate));
-//   }
-
-//   updateTasksDisplay(cardArray);
-// }
-
-// sortSelect.addEventListener("change",sortTasks)
-
-// function updateTasksDisplay(cardArray) {
-
-// }
+const sortByTimeButton = document.getElementById("sortTime-btn");
+sortByTimeButton.addEventListener("click", sortCardsByRemainingTime);
