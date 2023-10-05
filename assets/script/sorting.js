@@ -86,8 +86,6 @@
 
 console.table(cards);
 
-let sortOption = document.querySelector("#sort-select");
-
 sortOption.addEventListener("change", function () {
   console.log(sortOption.value);
 
